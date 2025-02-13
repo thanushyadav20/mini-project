@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Agricultural Machinery Rental &mdash; Free Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+      function storeMachineType() {
+          // Get the selected machine type from the dropdown
+          var selectedMachine = document.getElementById('machineType').value;
+
+          // Store the selected machine type in local storage
+          localStorage.setItem('selectedMachine', selectedMachine);
+      }
+
+      function redirectToSearchResults() {
+          // Add your logic here for processing the search
+          // For demonstration purposes, let's redirect to a search results page with selected dates and machine type
+          var pickUpDate = document.getElementById('cf-3').value;
+          var returnDate = document.getElementById('cf-4').value;
+
+          // Store selected dates in local storage
+          localStorage.setItem('pickUpDate', pickUpDate);
+          localStorage.setItem('returnDate', returnDate);
+
+          // Redirect to the form filling page
+          window.location.href = 'formfilling.html';
+          return false; // Prevent the form from submitting
+      }
+  </script>
+  </head>
+
+  <body>
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+
+            <div class="col-3">
+              <div class="site-logo">
+                <a href="index.html"><strong>Kaam Ghataav</strong></a>
+              </div>
+            </div>
+
+            <div class="col-9  text-right">
+              
+              <span class="d-inline-block d-lg-none"><a href="#" class=" site-menu-toggle js-menu-toggle py-5 "><span class="icon-menu h3 text-black"></span></a></span>
+
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="listing.html" class="nav-link"><b>Listing</b></a></li>
+                  <li><a href="about.html" class="nav-link"><b>About</b></a></li>
+                  <li><a href="contact.html" class="nav-link"><b>Contact</b></a></li>
+                  <li><a href="login.html" class="nav-link"><b>Login/SignUp</b></a></li>
+
+                </ul>
+              </nav>
+            </div>
+
+            
+          </div>
+        </div>
+
+      </header>
+
+      
+      <div class="hero" style="background-image: url('images/bg.jpg');">
+        
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-10">
+
+              <div class="row mb-5">
+                <div class="col-lg-7 intro">
+                  <h1><strong>Rent a Farm Equipment</strong> is within your finger tips.</h1>
+                </div>
+              </div>
+              
+              <form class="trip-form" id="searchForm" onsubmit="return redirectToSearchResults()">
+
+                <div class="row align-items-center">
+                  <div class="mb-3 mb-md-0 col-md-3">
+                      <select name="machineType" id="machineType" class="custom-select form-control" onchange="storeMachineType()">
+                          <option value="">Select Type</option>
+                          <option value="Tractors">Tractors</option>
+                          <option value="Crop Cutter">Crop Cutter</option>
+                          <option value="Backhoe Loader">Backhoe Loader</option>
+                          <option value="Cultivators">Cultivators</option>
+                          <option value="Seeders and Planters">Seeders and Planters</option>
+                          <option value="Threshers">Threshers</option>
+                      </select>
+                  </div>
+                    <div class="mb-3 mb-md-0 col-md-3">
+                        <div class="form-control-wrap">
+                            <input type="text" id="cf-3" placeholder="pickUpDate" class="form-control datepicker px-3">
+                            <span class="icon icon-date_range"></span>
+                        </div>
+                    </div>
+                    <div class="mb-3 mb-md-0 col-md-3">
+                        <div class="form-control-wrap">
+                            <input type="text" id="cf-4" placeholder="returnDate" class="form-control datepicker px-3">
+                            <span class="icon icon-date_range"></span>
+                        </div>
+                    </div>
+                    <div class="mb-3 mb-md-0 col-md-3">
+                        <input type="submit" value="Search Now" class="btn btn-primary btn-block py-3">
+                    </div>
+        
+                </div>
+               
+              
+            </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function redirectToSearchResults() {
+            var selectedMachine = document.getElementById('machineType').value;
+            var pickUpDate = document.getElementById('cf-3').value;
+            var returnDate = document.getElementById('cf-4').value;
+    
+            // Store selected dates in local storage
+            localStorage.setItem('pickUpDate', pickUpDate);
+            localStorage.setItem('returnDate', returnDate);
+    
+            // Redirect to the specific machinery page based on the selected machine type
+            var redirectURL = getMachineryPageURL(selectedMachine);
+            window.location.href = redirectURL;
+    
+            return false; // Prevent the form from submitting
+        }
+    
+        function getMachineryPageURL(machineType) {
+            // Modify this function to return the correct URL for each machinery type
+            switch (machineType) {
+                case 'Tractors':
+                    return 'tractor.html';
+                case 'Crop Cutter':
+                    return 'cropcutters.html';
+                case 'Backhoe Loader':
+                    return 'backhoe.html';
+                case 'Cultivators':
+                    return 'cultivators.html';
+                case 'Seeders and Planters':
+                    return 'seeders.html';
+                case 'Threshers':
+                    return 'threshers.html';
+                default:
+                    return 'listing.html'; // Default to listing page if no match
+            }
+        }
+    </script>
+
+      <div class="site-section">
+        <div class="container">
+          <h2 class="section-heading"><strong>How it works?</strong></h2>
+          <p class="mb-5">Easy steps to get you started</p>    
+
+          <div class="row mb-5">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <div class="step">
+                <span>1</span>
+                <div class="step-inner">
+                  <span class="number text-primary">01.</span>
+                  <h3>Select a Farm Equipment</h3>
+                  <p>Explore the vast fields of convenience with our farm equipment rentals—where every harvest begins with the perfect tool!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <div class="step">
+                <span>2</span>
+                <div class="step-inner">
+                  <span class="number text-primary">02.</span>
+                  <h3>Fill up form</h3>
+                  <p>Explore the vast fields of convenience with our farm equipment rentals—where every harvest begins with the perfect tool!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <div class="step">
+                <span>3</span>
+                <div class="step-inner">
+                  <span class="number text-primary">03.</span>
+                  <h3>Payment</h3>
+                  <p>Explore the vast fields of convenience with our farm equipment rentals—where every harvest begins with the perfect tool!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="site-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 text-center order-lg-2">
+              <div class="img-wrap-1 mb-5">
+                <img src="images/feature_01.jpg" alt="Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-4 ml-auto order-lg-1">
+              <h3 class="mb-4 section-heading"><strong>You can easily avail our promo for renting a Equipment.</strong></h3>
+              <p class="mb-5">Embark on your agricultural journey with us, where renting farm equipment is a seamless experience. Uncover the efficiency of well-maintained tools, ensuring every task is met with precision and ease!</p>
+              
+              <p><a href="#" class="btn btn-primary">Meet them now</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h2 class="section-heading"><strong>Equipment Listings</strong></h2>
+            <p class="mb-5">Explore the vast fields of convenience with our farm equipment rentals—where every harvest begins with the perfect tool.</p>    
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/tractor.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Tractors</h3>
+                <div class="rent-price">
+                  <strong>&#8377;1500.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Efficient and versatile, tractors are the backbone of modern agriculture. These powerful machines are essential for various tasks, from plowing and planting to towing and lifting, significantly enhancing overall farm productivity.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/crop cutters.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Crop Cutters</h3>
+                <div class="rent-price">
+                  <strong>&#8377;2500.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Crop cutters, also known as forage harvesters, are essential for efficient forage processing. These machines cut and chop crops into smaller, manageable pieces, making them suitable for livestock feed. Crop cutters contribute to enhanced feed quality and overall farm efficiency.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/backhoe loader.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Backhoe Loader</h3>
+                <div class="rent-price">
+                  <strong>&#8377;1150.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Versatile and powerful, backhoe loaders combine the capabilities of a loader and an excavator. These machines excel at digging, loading, and material handling tasks. With their multifunctional design, backhoe loaders contribute to increased efficiency in construction and agricultural applications.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/cultivators.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Cultivators</h3>
+                <div class="rent-price">
+                  <strong>&#8377;1100.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Cultivators play a crucial role in weed control and soil aeration. These machines break up soil crusts, control weed growth, and promote aeration, creating an optimal environment for plant roots to access nutrients and water.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/seeders and planters.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Seeders and Planters</h3>
+                <div class="rent-price">
+                  <strong>&#8377;2000.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Seeders and planters are specialized machines designed for precise seed placement, optimizing crop spacing and ensuring uniform germination. These efficient implements contribute to increased crop yield by promoting healthy and evenly distributed plant growth.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="col-md-6 col-lg-4 mb-4">
+
+            <div class="listing d-block  align-items-stretch">
+              <div class="listing-img h-100 mr-4">
+                <img src="images/threshers.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-contents h-100">
+                <h3>Threshers</h3>
+                <div class="rent-price">
+                  <strong>&#8377;1300.00</strong><span class="mx-1">/</span>day
+                </div>
+                <div>
+                  <p>Threshers revolutionize the process of separating grains from harvested crops. These machines efficiently remove seeds from stalks and husks, streamlining the post-harvest phase and contributing to a more productive and efficient farming operation.</p>
+                  <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+      
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="footer-heading mb-4">About Us</h2>
+              <p>Amidst the rolling hills of agricultural landscapes, far from the realms of Vokalia and Consonantia, our farm equipment rentals bring life to the silent fields.</p>
+              <ul class="list-unstyled social">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-8 ml-auto">
+              <div class="row">
+                <div class="col-lg-3">
+                  <h2 class="footer-heading mb-4">Quick Links</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">login</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3">
+                  <h2 class="footer-heading mb-4">Resources</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                  
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">login</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3">
+                  <h2 class="footer-heading mb-4">Support</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                  
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">login</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3">
+                  <h2 class="footer-heading mb-4">Company</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+              
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <div class="border-top pt-5">
+                <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>
+

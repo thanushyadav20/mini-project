@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 56px;
+            margin: 0;
+        }
+
+        .product-container {
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .product-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            z-index: -1;
+            filter: blur(10px); /* Adjust the blur value as needed */
+        }
+
+        .product-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color and transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn-rent-now-custom {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50; /* Green color, you can change it to your desired color */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-rent-now-custom:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+
+        .btn-rent-now-custom i {
+            display: none; /* Hide any icon within the button */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- Seeder and Planter -->
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <img src="images/seeders and planters.jpg" alt="Product Image" width="440" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <h1>Seeders and Planters</h1>
+                            <div class="price">
+                                <strong>&#8377;2000.00</strong><span class="mx-1">/</span>day
+                            </div>
+                            <p>Seeders and planters are specialized machines designed for precise seed placement, optimizing crop spacing and ensuring uniform germination. These efficient implements contribute to increased crop yield by promoting healthy and evenly distributed plant growth.</p>
+                            <p>
+                                <a href="formfilling.html" class="btn btn-primary btn-rent-now-custom"><i class="fas fa-shopping-cart"></i> Rent Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Product 1 -->
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <img src="images/seeders2.jpg" alt="Product Image" width="440" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <h1>Corn Harvester</h1>
+                            <div class="price">
+                                <strong>&#8377;3500.00</strong><span class="mx-1">/</span>day
+                            </div>
+                            <p>The Corn Harvester is a powerful machine designed for efficient harvesting of corn crops. With advanced features, it ensures fast and reliable corn harvesting, contributing to increased productivity for farmers. Rent the Corn Harvester for a seamless harvesting experience.</p>
+                            <p>
+                                <a href="formfilling.html" class="btn btn-primary btn-rent-now-custom"><i class="fas fa-shopping-cart"></i> Rent Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Product 2 -->
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <img src="images/seeders3.jpg" alt="Product Image" width="440" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <h1>Tractor Plow</h1>
+                            <div class="price">
+                                <strong>&#8377;2500.00</strong><span class="mx-1">/</span>day
+                            </div>
+                            <p>The Tractor Plow is an essential implement for soil preparation and cultivation. It efficiently breaks and turns the soil, making it suitable for planting crops. Rent the Tractor Plow for optimal soil tillage and preparation in your agricultural activities.</p>
+                            <p>
+                                <a href="formfilling.html" class="btn btn-primary btn-rent-now-custom"><i class="fas fa-shopping-cart"></i> Rent Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd

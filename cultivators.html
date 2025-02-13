@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 56px;
+            margin: 0;
+        }
+
+        .product-container {
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .product-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            z-index: -1;
+            filter: blur(10px); /* Adjust the blur value as needed */
+        }
+
+        .product-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color and transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn-rent-now-custom {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50; /* Green color, you can change it to your desired color */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-rent-now-custom:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+
+        .btn-rent-now-custom i {
+            display: none; /* Hide any icon within the button */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <img src="images/cultivators.jpg" alt="Product Image" width="450" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <h1>Crop Cultivator</h1>
+                            <div class="price">
+                                <strong>&#8377;1100.00</strong><span class="mx-1">/</span>day
+                            </div>
+                            <p>Cultivators play a crucial role in weed control and soil aeration. These machines break up soil crusts, control weed growth, and promote aeration, creating an optimal environment for plant roots to access nutrients and water.</p>
+                            <p>
+                                <a href="formfilling.html" class="btn btn-primary btn-rent-now-custom"><i class="fas fa-shopping-cart"></i> Rent Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <img src="images/cultivator2.jpg" alt="Product Image" width="450" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-container">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <h1>Mounted Field Cultivator</h1>
+                            <div class="price">
+                                <strong>&#8377;1500.00</strong><span class="mx-1">/</span>day
+                            </div>
+                            <p>The Mounted Field Cultivator is a versatile and efficient farming implement designed for soil preparation and cultivation. It is mounted on tractors, making it easy to navigate through fields. This cultivator is equipped with sturdy tines and blades that break up soil, control weeds, and promote optimal seedbed conditions. Rent the Mounted Field Cultivator today for enhanced agricultural productivity</p>
+                            <p>
+                                <a href="formfilling.html" class="btn btn-primary btn-rent-now-custom"><i class="fas fa-shopping-cart"></i> Rent Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

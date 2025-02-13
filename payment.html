@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Payment Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 56px;
+        }
+
+        .container {
+            margin-top: 10px;
+        }
+
+        .payment-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .payment-method {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .btn-pay-now {
+            font-size: 22px;
+            padding: 8px 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="payment-container">
+                    <div class="payment-method">
+                        <h1>Select Payment Method</h1>
+                        <p>
+                            <button class="btn btn-warning btn-pay-now" onclick="payWithGPay()">Pay with GPay</button>
+                        </p>
+                        <p>
+                            <a href="order_confirmation.html" class="btn btn-success btn-pay-now">Cash on Delivery</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- GPay Integration Script -->
+    <script>
+        function payWithGPay() {
+            // Your GPay integration logic goes here
+            // Redirect to Order Confirmation Page after successful payment
+            window.location.href = 'order_confirmation.html';
+        }
+    </script>
+</body>
+
+</html>
